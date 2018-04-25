@@ -8,7 +8,12 @@ Docker images can consist of multiple layers. In the example above, the image co
 
 Layers can be reused by images. For example, the debian:jessie image shares both layers with debian:latest. Pulling the debian:jessie image therefore only pulls its metadata, but not its layers, because all layers are already present locally:
 
-
-
 ![](/assets/pull.png)
+
+
+
+To see which images are present locally, use the[`docker images`](https://docs.docker.com/engine/reference/commandline/images/)command:
+
+  
+![](/assets/pull2.png)
 
