@@ -10,10 +10,15 @@ Layers can be reused by images. For example, the debian:jessie image shares both
 
 ![](/assets/pull.png)
 
-
-
 To see which images are present locally, use the[`docker images`](https://docs.docker.com/engine/reference/commandline/images/)command:
 
-  
 ![](/assets/pull2.png)
+
+
+
+Docker uses a content-addressable image store, and the image ID is a SHA256 digest covering the image’s configuration and layers. In the example above, debian:jessie and debian:latest have the same image ID because they are actually the same image tagged with different names. Because they are the same image, their layers are stored only once and do not consume extra disk space.
+
+
+
+
 
